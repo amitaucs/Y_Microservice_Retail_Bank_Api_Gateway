@@ -16,3 +16,4 @@ spring:
               args:
                 name: retailBankCircuitBreaker
                 fallbackUri: forward:/fallback/retailBankFallback
+            - name: RetailBankPreFilter
