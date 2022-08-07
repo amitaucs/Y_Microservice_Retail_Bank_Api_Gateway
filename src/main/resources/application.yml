@@ -17,3 +17,4 @@ spring:
                 name: retailBankCircuitBreaker
                 fallbackUri: forward:/fallback/retailBankFallback
             - name: RetailBankPreFilter
+            - name: RetailBankPostFilter
