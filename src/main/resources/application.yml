@@ -2,17 +2,4 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
-spring:
-  cloud:
-    gateway:
-      routes:
-        - id : retail-bank-account-route
-          uri: lb://retail-bank-account-service
-          predicates:
-            - Path=/retailBank/*
-            - Method=GET,POST,PUT,DELETE
-          filters:
-            - name: CircuitBreaker
-              args:
-                name: retailBankCircuitBreaker
-                fallbackUri: forward:/fallback/retailBankFallback
+
